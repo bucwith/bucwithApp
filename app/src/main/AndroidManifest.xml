@@ -3,7 +3,13 @@
     package="com.teamb.bucwith"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <queries>
+        <package android:name="com.kakao.talk" />
+    </queries>
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
