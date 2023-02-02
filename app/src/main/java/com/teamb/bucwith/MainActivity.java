@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // 캐시 사용안함 (매번 새로 로딩)
         webSettings.setDomStorageEnabled(true);
 
+        String agentNew = webSettings.getUserAgentString() + " ANDROID_APP";
+        webSettings.setUserAgentString(agentNew);
+
         webView.addJavascriptInterface(new WebAppInterface(), "NativeAndroid");   // Bridge ( 링크 복사 )
         webView.setWebViewClient(new WebViewClientClass());
         webView.loadUrl("https://bucwiths.shop");  // 앱에서 표시할 url 입력
